@@ -1,0 +1,27 @@
+.center{
+       text-align: center;
+     }
+       table{
+          margin: 230px auto;
+          border-collapse: collapse;
+          font-style: italic;
+     }
+            th,td{
+                border: 1px solid rgb(33, 12, 12);
+                border-collapse: collapse;
+                padding: 10px;
+                
+     }
+
+            th{
+                background-color: aqua;
+                font-style: italic;
+     }
+
+      td{
+                background-color: beige;
+                font-style: italic;
+     }
+     body{
+      background-color: linen;
+     }

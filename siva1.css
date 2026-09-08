@@ -1,0 +1,105 @@
+        h1{
+                font-family: 'Times New Roman', Times, serif;
+                text-align: center;
+                border: 2px solid black;
+                border-radius: 5px;
+                margin: 0 auto 10;
+                padding: 10px;
+        }
+
+            h1::after{
+                content: "*";
+            }
+
+            h1::before{
+                content: "*";
+            }
+
+            #Vandhe-Bharath-Train{
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                border: 2px solid black;
+                border-radius: 2px;
+                margin: 0 auto 10px;
+                padding: 10px;
+            }
+
+            .Godavari-river{
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                border: 2px solid black;
+                border-radius: 2px;
+                margin: 0 auto 10px;
+                padding: 10px;
+            }
+
+            div p{
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                border: 2px solid black;
+                border-radius: 2px;
+                margin: 0 auto 10;
+                padding: 10px;
+                border-bottom: 2px solid black;
+            }
+
+            input[type="text"]{
+                background-color: cyan;
+            }
+
+            input[type="tel"]{
+                background-color: cyan;
+            }
+
+            input[type="radio"]{
+                accent-color: green;
+            }
+
+            input:focus{
+                font-family: fantasy;
+            }
+
+            button:hover{
+                font-family: fantasy;
+            }
+
+            form {
+                width: 400px;
+            }
+
+            body{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+            }
+
+            label{
+                font-size: 20px;
+            }
+
+            input[type="text"],
+            input[type=tel]{
+                padding: 8px;
+                border-radius: 5px;
+            }
+
+            button[type="submit"]{
+                border: none;
+                padding: 8px 18px;
+                border-radius: 5px;
+            }
+
+            button[type="reset"]{
+                border: none;
+                padding: 8px 18px;
+                border-radius: 5px;
+            }
+
+            input::placeholder{
+                color: gray;
+            }
+
+            label{
+                font-size: 18px;
+            }
+            body {
+                background-color: rgb(208, 205, 219);
+            }

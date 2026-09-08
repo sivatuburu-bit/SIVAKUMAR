@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Araku Valley Agricultural Farming</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f3f1e7;
+            color: #333;
+        }
+
+        /* HERO */
+
+        .hero {
+            height: 430px;
+
+            background:
+            linear-gradient(rgba(0,0,0,0.50),
+                            rgba(0,0,0,0.50)),
+            url("https://images.unsplash.com/photo-1492496913980-501348b61469");
+
+            background-size: cover;
+            background-position: center;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 50px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 20px;
+        }
+
+
+        /* NAVIGATION */
+
+        nav {
+            background: #285943;
+            padding: 16px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 18px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #f5d76e;
+        }
+
+
+        /* INTRODUCTION */
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 60px 20px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #285943;
+            font-size: 34px;
+            margin-bottom: 20px;
+        }
+
+        .intro {
+            max-width: 850px;
+            margin: auto;
+            text-align: center;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+
+        /* FARMING CARDS */
+
+        .farming {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 22px;
+        }
+
+        .card-content h3 {
+            color: #356b48;
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .card-content p {
+            line-height: 1.6;
+        }
+
+
+        /* FARMING METHODS */
+
+        .methods-section {
+            background: #dfe9d8;
+            padding: 60px 20px;
+        }
+
+        .methods {
+            max-width: 1050px;
+            margin: auto;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+
+            margin-top: 35px;
+        }
+
+        .method {
+            background: white;
+            padding: 25px;
+
+            border-left: 6px solid #3c7a4d;
+            border-radius: 10px;
+
+            box-shadow: 0 3px 10px rgba(0,0,0,0.10);
+        }
+
+        .method h3 {
+            color: #285943;
+            margin-bottom: 10px;
+        }
+
+        .method p {
+            line-height: 1.7;
+        }
+
+
+        /* COFFEE SECTION */
+
+        .coffee {
+            max-width: 1100px;
+            margin: auto;
+            padding: 60px 20px;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+
+            align-items: center;
+        }
+
+        .coffee img {
+            width: 100%;
+            height: 330px;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+
+        .coffee-text h2 {
+            text-align: left;
+        }
+
+        .coffee-text p {
+            font-size: 17px;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+
+        /* HIGHLIGHT */
+
+        .highlight {
+            background: #285943;
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .highlight h2 {
+            color: #f5d76e;
+        }
+
+        .highlight p {
+            font-size: 19px;
+        }
+
+
+        /* FOOTER */
+
+        footer {
+            background: #19352a;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+
+        /* MOBILE */
+
+        @media (max-width: 768px) {
+
+            .hero h1 {
+                font-size: 34px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .farming {
+                grid-template-columns: 1fr;
+            }
+
+            .methods {
+                grid-template-columns: 1fr;
+            }
+
+            .coffee {
+                grid-template-columns: 1fr;
+            }
+
+            nav a {
+                margin: 0 7px;
+                font-size: 14px;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- HERO -->
+
+    <div class="hero">
+
+        <div>
+
+            <h1>Araku Valley Agriculture</h1>
+
+            <p>
+                Farming, Coffee Plantations and Traditional Agriculture
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- NAVIGATION -->
+
+    <nav>
+
+        <a href="#about">About</a>
+        <a href="#farming">Farming</a>
+        <a href="#coffee">Coffee</a>
+        <a href="#methods">Methods</a>
+
+    </nav>
+
+
+    <!-- ABOUT -->
+
+    <section class="container" id="about">
+
+        <h2>Araku Valley Agricultural Farming</h2>
+
+        <p class="intro">
+
+            Agriculture is an important part of life in Araku Valley.
+            The region's hills, forests, climate and fertile soils support
+            different agricultural activities. Farmers cultivate crops
+            using traditional knowledge along with modern farming practices.
+
+        </p>
+
+
+        <!-- FARMING CARDS -->
+
+        <div class="farming" id="farming">
+
+
+            <!-- CARD 1 -->
+
+            <div class="card">
+
+                <img
+                src="https://images.unsplash.com/photo-1447933601403-0c6688de566e"
+                alt="Coffee Farming">
+
+                <div class="card-content">
+
+                    <h3>☕ Coffee Farming</h3>
+
+                    <p>
+                        Araku Valley is well known for its coffee plantations.
+                        Coffee is grown in the valley's hilly environment
+                        under suitable shade and climatic conditions.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- CARD 2 -->
+
+            <div class="card">
+
+                <img
+                src="https://images.unsplash.com/photo-1523742818307-2c7b6c2f0f9a"
+                alt="Agricultural Farm">
+
+                <div class="card-content">
+
+                    <h3>🌱 Traditional Farming</h3>
+
+                    <p>
+                        Local farmers have developed agricultural practices
+                        suited to the hilly landscape and local environment.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- CARD 3 -->
+
+            <div class="card">
+
+                <img
+                src="https://images.unsplash.com/photo-1499529112087-3cb3b73cec95"
+                alt="Organic Farming">
+
+                <div class="card-content">
+
+                    <h3>🌿 Organic Farming</h3>
+
+                    <p>
+                        Sustainable and nature-friendly farming practices
+                        can help protect soil, water and the surrounding
+                        ecosystem.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- COFFEE -->
+
+    <section class="coffee" id="coffee">
+
+        <img
+        src="https://images.unsplash.com/photo-1447933601403-0c6688de566e"
+        alt="Araku Coffee Plantation">
+
+
+        <div class="coffee-text">
+
+            <h2>Araku Coffee Plantations</h2>
+
+            <p>
+                Coffee cultivation has become an important part of
+                Araku Valley's agricultural landscape.
+            </p>
+
+            <p>
+                Coffee plantations are found across the hilly areas,
+                where shade trees and the local climate provide suitable
+                conditions for cultivation.
+            </p>
+
+            <p>
+                Araku coffee is also associated with the region's
+                tribal farming communities and their agricultural
+                traditions.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- FARMING METHODS -->
+
+    <section class="methods-section" id="methods">
+
+        <h2>Farming Practices</h2>
+
+
+        <div class="methods">
+
+
+            <div class="method">
+
+                <h3>🌳 Shade-Grown Farming</h3>
+
+                <p>
+                    Shade trees can provide a suitable environment for
+                    coffee cultivation while supporting biodiversity
+                    within plantations.
+                </p>
+
+            </div>
+
+
+            <div class="method">
+
+                <h3>💧 Water Management</h3>
+
+                <p>
+                    Efficient use of available water is important for
+                    maintaining agricultural productivity, especially
+                    in hilly areas.
+                </p>
+
+            </div>
+
+
+            <div class="method">
+
+                <h3>🌾 Crop Cultivation</h3>
+
+                <p>
+                    Farmers cultivate different crops according to
+                    local conditions, soil, season and available resources.
+                </p>
+
+            </div>
+
+
+            <div class="method">
+
+                <h3>♻️ Sustainable Agriculture</h3>
+
+                <p>
+                    Sustainable farming practices can help maintain
+                    soil quality and protect the natural environment
+                    for future generations.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- HIGHLIGHT -->
+
+    <section class="highlight">
+
+        <h2>Farming & Nature of Araku Valley</h2>
+
+        <p>
+            Agriculture connects the people, land and natural environment
+            of the beautiful Araku Valley.
+        </p>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            © 2026 Araku Valley Agriculture | Andhra Pradesh
+        </p>
+
+    </footer>
+
+
+</body>
+</html>

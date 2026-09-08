@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Araku Valley Tourism</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#f5f8f4;
+    color:#222;
+}
+
+/* NAVBAR */
+nav{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
+    padding:18px 7%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(0,0,0,.35);
+    transition:.3s;
+}
+
+nav.scrolled{
+    background:#173b27;
+}
+
+.logo{
+    color:white;
+    font-size:28px;
+    font-weight:bold;
+}
+
+.logo span{
+    color:#ffd166;
+}
+
+.nav-links{
+    display:flex;
+    gap:25px;
+    list-style:none;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.nav-links a:hover{
+    color:#ffd166;
+}
+
+.menu{
+    display:none;
+    color:white;
+    font-size:28px;
+    cursor:pointer;
+}
+
+/* HERO */
+.hero{
+    min-height:100vh;
+    background:
+    linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.45)),
+    url("https://commons.wikimedia.org/wiki/Special:Redirect/file/Araku%20Valley%20scenic%20view%2002.jpg")
+    center/cover no-repeat;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    padding:20px;
+}
+
+.hero-content h1{
+    font-size:70px;
+    margin-bottom:15px;
+}
+
+.hero-content p{
+    font-size:22px;
+    margin-bottom:30px;
+}
+
+.btn{
+    display:inline-block;
+    padding:13px 25px;
+    margin:5px;
+    border-radius:25px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.primary{
+    background:#ffd166;
+    color:#222;
+}
+
+.secondary{
+    border:2px solid white;
+    color:white;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+}
+
+/* COMMON */
+section{
+    padding:80px 7%;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:45px;
+}
+
+.section-title h2{
+    font-size:40px;
+    color:#173b27;
+}
+
+.section-title p{
+    margin-top:10px;
+    color:#666;
+}
+
+/* INTRO */
+.intro{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+    align-items:center;
+}
+
+.intro img{
+    width:100%;
+    height:400px;
+    object-fit:cover;
+    border-radius:20px;
+}
+
+.intro-text h2{
+    font-size:40px;
+    color:#173b27;
+    margin-bottom:20px;
+}
+
+.intro-text p{
+    line-height:1.8;
+    color:#555;
+}
+
+/* PLACES */
+.places{
+    background:#eaf3eb;
+}
+
+.place-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.place-card{
+    background:white;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 5px 20px rgba(0,0,0,.1);
+    transition:.3s;
+}
+
+.place-card:hover{
+    transform:translateY(-8px);
+}
+
+.place-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.place-content{
+    padding:20px;
+}
+
+.place-content h3{
+    color:#173b27;
+    margin-bottom:10px;
+}
+
+.place-content p{
+    color:#666;
+    line-height:1.6;
+    margin-bottom:15px;
+}
+
+.place-actions{
+    display:flex;
+    gap:8px;
+    flex-wrap:wrap;
+}
+
+.place-actions a{
+    text-decoration:none;
+    padding:9px 13px;
+    border-radius:20px;
+    font-size:14px;
+    font-weight:bold;
+}
+
+.search-btn{
+    background:#e8f0ff;
+    color:#1557b0;
+}
+
+.map-btn{
+    background:#e8f7ed;
+    color:#188038;
+}
+
+/* CULTURE */
+.culture-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.culture-card{
+    padding:30px 20px;
+    text-align:center;
+    background:white;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.culture-card .icon{
+    font-size:45px;
+    margin-bottom:15px;
+}
+
+.culture-card h3{
+    color:#173b27;
+    margin-bottom:10px;
+}
+
+.culture-card p{
+    color:#666;
+    line-height:1.5;
+}
+
+/* COFFEE */
+.coffee{
+    background:#f0e8dc;
+}
+
+.coffee-box{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+    align-items:center;
+}
+
+.coffee-box img{
+    width:100%;
+    height:400px;
+    object-fit:cover;
+    border-radius:20px;
+}
+
+.coffee-text h2{
+    font-size:40px;
+    color:#5c3718;
+    margin-bottom:20px;
+}
+
+.coffee-text p{
+    line-height:1.8;
+    color:#555;
+}
+
+/* GALLERY */
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+}
+
+.gallery img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    border-radius:15px;
+    transition:.3s;
+}
+
+.gallery img:hover{
+    transform:scale(1.03);
+}
+
+/* TRAVEL */
+.travel{
+    background:#eaf3eb;
+}
+
+.travel-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.travel-card{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    text-align:center;
+}
+
+.travel-card h3{
+    color:#173b27;
+    margin-bottom:12px;
+}
+
+.travel-card p{
+    color:#666;
+    line-height:1.6;
+}
+
+/* CTA */
+.cta{
+    background:
+    linear-gradient(rgba(23,59,39,.85),rgba(23,59,39,.85)),
+    url("https://commons.wikimedia.org/wiki/Special:Redirect/file/Galikonda%20Araku.jpg")
+    center/cover;
+
+    color:white;
+    text-align:center;
+}
+
+.cta h2{
+    font-size:40px;
+    margin-bottom:15px;
+}
+
+.cta p{
+    margin-bottom:25px;
+}
+
+/* FOOTER */
+footer{
+    background:#10291c;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+footer p{
+    margin:7px;
+}
+
+footer a{
+    color:#ffd166;
+}
+
+/* MOBILE */
+@media(max-width:900px){
+
+    .nav-links{
+        display:none;
+        position:absolute;
+        top:70px;
+        right:0;
+        width:220px;
+        background:#173b27;
+        flex-direction:column;
+        padding:20px;
+    }
+
+    .nav-links.active{
+        display:flex;
+    }
+
+    .menu{
+        display:block;
+    }
+
+    .hero-content h1{
+        font-size:48px;
+    }
+
+    .intro,
+    .coffee-box{
+        grid-template-columns:1fr;
+    }
+
+    .place-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .culture-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .travel-grid{
+        grid-template-columns:1fr;
+    }
+
+    .gallery{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:600px){
+
+    section{
+        padding:60px 5%;
+    }
+
+    .hero-content h1{
+        font-size:40px;
+    }
+
+    .hero-content p{
+        font-size:18px;
+    }
+
+    .place-grid,
+    .culture-grid,
+    .gallery{
+        grid-template-columns:1fr;
+    }
+
+    .section-title h2{
+        font-size:32px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+
+    <div class="logo">
+        Ara<span>Ku</span>
+    </div>
+
+    <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#places">Places</a></li>
+        <li><a href="#culture">Culture</a></li>
+        <li><a href="#coffee">Coffee</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#travel">Travel</a></li>
+    </ul>
+
+    <div class="menu" id="menu">☰</div>
+
+</nav>
+
+
+<!-- HERO -->
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <h1>Araku Valley</h1>
+
+        <p>
+            Explore the Beautiful Hills, Coffee Plantations & Tribal Culture
+        </p>
+
+        <a href="#places" class="btn primary">
+            Explore Places
+        </a>
+
+        <a href="#travel" class="btn secondary">
+            Travel Guide
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- INTRO -->
+<section>
+
+    <div class="intro">
+
+        <img
+        src="https://commons.wikimedia.org/wiki/Special:Redirect/file/A%20view%20of%20Araku%20Valley%20hill%20station%20in%20Andhra%20Pradesh.jpg"
+        alt="Araku Valley">
+
+        <div class="intro-text">
+
+            <h2>Welcome to Araku</h2>
+
+            <p>
+                Araku Valley is a beautiful hill station in Andhra Pradesh,
+                surrounded by green mountains, valleys, waterfalls and
+                coffee plantations.
+            </p>
+
+            <br>
+
+            <p>
+                It is also famous for its tribal culture, natural beauty,
+                scenic viewpoints and pleasant atmosphere.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PLACES -->
+<section class="places" id="places">
+
+    <div class="section-title">
+
+        <h2>Popular Tourist Places</h2>
+
+        <p>
+            Find information and locations easily
+        </p>
+
+    </div>
+
+
+    <div class="place-grid">
+
+
+        <!-- BORRA -->
+        <div class="place-card">
+
+            <img
+            src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Borra%20Caves%20with%20Lights.jpg"
+            alt="Borra Caves">
+
+            <div class="place-content">
+
+                <h3>🪨 Borra Caves</h3>
+
+                <p>
+                    Famous limestone caves with beautiful natural
+                    rock formations.
+                </p>
+
+                <div class="place-actions">
+
+                    <a
+                    class="search-btn"
+                    href="https://www.google.com/search?q=Borra+Caves+Araku+Valley"
+                    target="_blank">
+                    🔎 Search
+                    </a>
+
+                    <a
+                    class="map-btn"
+                    href="https://www.google.com/maps/search/?api=1&query=Borra+Caves+Araku+Valley"
+                    target="_blank">
+                    📍 Maps
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- TRIBAL MUSEUM -->
+        <div class="place-card">
+
+            <img
+            src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Tribal%20Museum%2C%20Araku%20Valley.jpg"
+            alt="Tribal Museum">
+
+            <div class="place-content">
+
+                <h3>🏛️ Tribal Museum</h3>
+
+                <p>
+                    Learn about the lifestyle, culture and traditions
+                    of the tribal communities.
+                </p>
+
+                <div class="place-actions">
+
+                    <a
+                    class="search-btn"
+                    href="https://www.google.com/search?q=Tribal+Museum+Araku+Valley"
+                    target="_blank">
+                    🔎 Search
+                    </a>
+
+                    <a
+                    class="map-btn"
+                    href="https://www.google.com/maps/search/?api=1&query=Tribal+Museum+Araku+Valley"
+                    target="_blank">
+                    📍 Maps
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- COFFEE -->
+        <div class="place-card">
+
+            <img
+            src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Araku%20Valley%20coffee%20plantations.jpg"
+            alt="Araku Coffee Plantations">
+
+            <div class="place-content">
+
+                <h3>☕ Coffee Plantations</h3>
+
+                <p>
+                    Enjoy the green coffee plantations and discover
+                    Araku's famous coffee culture.
+                </p>
+
+                <div class="place-actions">
+
+                    <a
+                    class="search-btn"
+                    href="https://www.google.com/search?q=Araku+Valley+Coffee+Plantations"
+                    target="_blank">
+                    🔎 Search
+                    </a>
+
+                    <a
+                    class="map-btn"
+                    href="https://www.google.com/maps/search/?api=1&query=Araku+Valley+Coffee+Plantations"
+                    target="_blank">
+                    📍 Maps
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- CHAPARAI -->
+        <div class="place-card">
+
+            <img
+            src="https://chalbanjare.com/crmnew/img_master/package/ChaparaiWaterfalls_17722728910.webp"
+            alt="Chaparai Waterfalls">
+
+            <div class="place-content">
+
+                <h3>💦 Chaparai</h3>
+
+                <p>
+                    A scenic natural water cascade surrounded by
+                    green hills.
+                </p>
+
+                <div class="place-actions">
+
+                    <a
+                    class="search-btn"
+                    href="https://www.google.com/search?q=Chaparai+Araku+Valley"
+                    target="_blank">
+                    🔎 Search
+                    </a>
+
+                    <a
+                    class="map-btn"
+                    href="https://www.google.com/maps/search/?api=1&query=Chaparai+Araku+Valley"
+                    target="_blank">
+                    📍 Maps
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- KATIKI -->
+        <div class="place-card">
+
+            <img
+            src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Katiki%20waterfalls.jp.jpg"
+            alt="Katiki Waterfalls">
+
+            <div class="place-content">
+
+                <h3>💧 Katiki Waterfalls</h3>
+
+                <p>
+                    A beautiful waterfall surrounded by the
+                    natural landscape of the Araku region.
+                </p>
+
+                <div class="place-actions">
+
+                    <a
+                    class="search-btn"
+                    href="https://www.google.com/search?q=Katiki+Waterfalls+Araku"
+                    target="_blank">
+                    🔎 Search
+                    </a>
+
+                    <a
+                    class="map-btn"
+                    href="https://www.google.com/maps/search/?api=1&query=Katiki+Waterfalls+Araku"
+                    target="_blank">
+                    📍 Maps
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- GALIKONDA -->
+        <div class="place-card">
+
+            <img
+            src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Galikonda%20Araku.jpg"
+            alt="Galikonda Viewpoint">
+
+            <div class="place-content">
+
+                <h3>⛰️ Galikonda Viewpoint</h3>
+
+                <p>
+                    Enjoy amazing panoramic views of the green
+                    Araku hills and valleys.
+                </p>
+
+                <div class="place-actions">
+
+                    <a
+                    class="search-btn"
+                    href="https://www.google.com/search?q=Galikonda+Viewpoint+Araku"
+                    target="_blank">
+                    🔎 Search
+                    </a>
+
+                    <a
+                    class="map-btn"
+                    href="https://www.google.com/maps/search/?api=1&query=Galikonda+Viewpoint+Araku"
+                    target="_blank">
+                    📍 Maps
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CULTURE -->
+<section id="culture">
+
+    <div class="section-title">
+
+        <h2>Araku Culture</h2>
+
+        <p>Experience the unique tribal culture</p>
+
+    </div>
+
+
+    <div class="culture-grid">
+
+        <div class="culture-card">
+
+            <div class="icon">🥁</div>
+
+            <h3>Tribal Music</h3>
+
+            <p>
+                Traditional tribal music is an important part
+                of Araku's cultural identity.
+            </p>
+
+        </div>
+
+
+        <div class="culture-card">
+
+            <div class="icon">💃</div>
+
+            <h3>Dhimsa Dance</h3>
+
+            <p>
+                A traditional tribal dance performed during
+                festivals and celebrations.
+            </p>
+
+        </div>
+
+
+        <div class="culture-card">
+
+            <div class="icon">🎨</div>
+
+            <h3>Handicrafts</h3>
+
+            <p>
+                Explore traditional handicrafts and artwork
+                made by local communities.
+            </p>
+
+        </div>
+
+
+        <div class="culture-card">
+
+            <div class="icon">🌳</div>
+
+            <h3>Forest Life</h3>
+
+            <p>
+                Araku is surrounded by beautiful forests,
+                mountains and rich natural scenery.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- COFFEE -->
+<section class="coffee" id="coffee">
+
+    <div class="coffee-box">
+
+        <img
+        src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Araku%20Valley%20coffee%20plantations.jpg"
+        alt="Araku Coffee">
+
+        <div class="coffee-text">
+
+            <h2>☕ Araku Coffee</h2>
+
+            <p>
+                Araku Valley is well known for its coffee plantations.
+                The cool climate and mountain environment create
+                excellent conditions for coffee cultivation.
+            </p>
+
+            <br>
+
+            <p>
+                Visitors can explore coffee plantations and learn
+                about the journey from coffee beans to the final cup.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- GALLERY -->
+<section id="gallery">
+
+    <div class="section-title">
+
+        <h2>Araku Gallery</h2>
+
+        <p>Beautiful real views from Araku Valley</p>
+
+    </div>
+
+
+    <div class="gallery">
+
+        <img
+        src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Araku%20Valley%20scenic%20view%2002.jpg"
+        alt="Araku Scenic View">
+
+        <img
+        src="https://commons.wikimedia.org/wiki/Special:Redirect/file/A%20view%20of%20Araku%20Valley%20hill%20station%20in%20Andhra%20Pradesh.jpg"
+        alt="Araku Hills">
+
+        <img
+        src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Borra%20Caves%20with%20Lights.jpg"
+        alt="Borra Caves">
+
+        <img
+        src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Tribal%20Museum%2C%20Araku%20Valley.jpg"
+        alt="Tribal Museum">
+
+        <img
+        src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Katiki%20waterfalls.jp.jpg"
+        alt="Katiki Waterfalls">
+
+        <img
+        src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Galikonda%20Araku.jpg"
+        alt="Galikonda">
+
+    </div>
+
+</section>
+
+
+<!-- TRAVEL -->
+<section class="travel" id="travel">
+
+    <div class="section-title">
+
+        <h2>Travel Information</h2>
+
+        <p>Useful information for tourists</p>
+
+    </div>
+
+
+    <div class="travel-grid">
+
+        <div class="travel-card">
+
+            <h3>🚆 By Train</h3>
+
+            <p>
+                Araku can be reached by train from Visakhapatnam.
+                The railway journey is famous for its scenic
+                mountain views.
+            </p>
+
+        </div>
+
+
+        <div class="travel-card">
+
+            <h3>🚗 By Road</h3>
+
+            <p>
+                Araku is connected by road with Visakhapatnam
+                and other nearby areas.
+            </p>
+
+        </div>
+
+
+        <div class="travel-card">
+
+            <h3>🌤️ Best Experience</h3>
+
+            <p>
+                Plan enough time to explore viewpoints,
+                waterfalls, caves, coffee plantations and
+                local culture.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CTA -->
+<section class="cta">
+
+    <h2>Explore Araku Valley 🌿</h2>
+
+    <p>
+        Discover nature, culture, coffee and beautiful mountains.
+    </p>
+
+    <a
+    href="https://www.google.com/search?q=Araku+Valley+tourist+places"
+    target="_blank"
+    class="btn primary">
+    🔎 Search More Places
+    </a>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+
+    <p>© 2026 Araku Valley Tourism</p>
+
+    <p>
+        Explore • Experience • Enjoy 🌿
+    </p>
+
+</footer>
+
+
+<script>
+
+/* MOBILE MENU */
+
+const menu = document.getElementById("menu");
+const navLinks = document.getElementById("navLinks");
+
+menu.addEventListener("click", function(){
+
+    navLinks.classList.toggle("active");
+
+});
+
+
+/* NAVBAR BACKGROUND */
+
+window.addEventListener("scroll", function(){
+
+    const navbar = document.getElementById("navbar");
+
+    if(window.scrollY > 50){
+
+        navbar.classList.add("scrolled");
+
+    }else{
+
+        navbar.classList.remove("scrolled");
+
+    }
+
+});
+
+</script>
+
+</body>
+</html>

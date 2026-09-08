@@ -1,0 +1,22 @@
+h1{
+  text-align: center;
+  font-style: "times new roman",serif;
+  border: 2px solid black;
+  border-radius: 10px;
+  display: table;
+  margin: auto;
+  padding: 20px;
+}
+h1::before{
+  content: "*";
+}
+h1::after{
+  content: "*";
+}
+p{
+  border: 2px solid brown;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 0 auto 10px;
+  margin-bottom: 10px;
+}

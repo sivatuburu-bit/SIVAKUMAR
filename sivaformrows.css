@@ -1,0 +1,18 @@
+.formcontainer{
+    border: 2px solid black;
+    border-radius: 2px;
+    margin: 0 auto 10px;
+    background-color: skyblue;
+    width: 400px;
+}
+
+.formrow{
+    display: grid;
+    grid-template-rows: auto;
+    padding: 10px;
+    text-align: center;
+}
+
+.forminput{
+    padding: 10px;
+}

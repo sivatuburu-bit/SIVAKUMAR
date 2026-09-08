@@ -1,0 +1,1568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Papikondalu | Godavari River Escape</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* =========================
+   RESET
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Poppins,sans-serif;
+    background:#f7f4ec;
+    color:#173b38;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:999;
+    padding:18px 6%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    background:rgba(8,43,42,.75);
+    backdrop-filter:blur(14px);
+}
+
+.logo{
+    color:#fff;
+    font-family:"DM Serif Display",serif;
+    font-size:27px;
+}
+
+.logo span{
+    color:#e9bd63;
+}
+
+.nav-links{
+    display:flex;
+    gap:28px;
+    list-style:none;
+}
+
+.nav-links a{
+    color:#fff;
+    text-decoration:none;
+    font-size:14px;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#e9bd63;
+}
+
+.menu{
+    display:none;
+    color:white;
+    font-size:25px;
+    cursor:pointer;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    min-height:100vh;
+
+    background:
+    linear-gradient(
+        90deg,
+        rgba(4,35,34,.90),
+        rgba(4,35,34,.45),
+        rgba(4,35,34,.05)
+    ),
+    url("https://www.go2india.in/ap/images/godavari-perantalapalli.jpg");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    align-items:center;
+
+    padding:120px 8% 70px;
+
+    color:white;
+}
+
+.hero-content{
+    max-width:720px;
+}
+
+.small-title{
+    color:#e9bd63;
+    font-size:14px;
+    letter-spacing:4px;
+    text-transform:uppercase;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-family:"DM Serif Display",serif;
+    font-size:clamp(55px,8vw,105px);
+    line-height:.95;
+    font-weight:400;
+}
+
+.hero h1 span{
+    color:#e9bd63;
+}
+
+.hero p{
+    margin-top:30px;
+    max-width:650px;
+    line-height:1.9;
+    color:#e7eeee;
+    font-size:16px;
+}
+
+.hero-buttons{
+    margin-top:35px;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 27px;
+    border-radius:4px;
+    text-decoration:none;
+    margin-right:10px;
+    transition:.3s;
+    font-weight:600;
+}
+
+.btn-gold{
+    background:#e9bd63;
+    color:#173b38;
+}
+
+.btn-gold:hover{
+    transform:translateY(-4px);
+}
+
+.btn-light{
+    border:1px solid white;
+    color:white;
+}
+
+.btn-light:hover{
+    background:white;
+    color:#173b38;
+}
+
+/* =========================
+   FLOATING INFO
+========================= */
+
+.quick-info{
+    position:relative;
+    margin:-55px auto 0;
+    width:88%;
+    max-width:1150px;
+
+    background:#fff;
+    border-radius:12px;
+
+    box-shadow:0 20px 50px rgba(0,0,0,.15);
+
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    overflow:hidden;
+}
+
+.quick-card{
+    padding:28px 20px;
+    text-align:center;
+    border-right:1px solid #eee;
+}
+
+.quick-card:last-child{
+    border:none;
+}
+
+.quick-card .icon{
+    font-size:28px;
+    margin-bottom:8px;
+}
+
+.quick-card h3{
+    font-size:15px;
+    color:#173b38;
+}
+
+.quick-card p{
+    color:#777;
+    font-size:12px;
+    margin-top:5px;
+}
+
+/* =========================
+   COMMON SECTION
+========================= */
+
+section{
+    padding:100px 7%;
+}
+
+.section-head{
+    max-width:750px;
+    margin:0 auto 55px;
+    text-align:center;
+}
+
+.section-head .eyebrow{
+    color:#b88932;
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:3px;
+    text-transform:uppercase;
+}
+
+.section-head h2{
+    font-family:"DM Serif Display",serif;
+    font-size:55px;
+    font-weight:400;
+    margin:12px 0;
+    color:#173b38;
+}
+
+.section-head p{
+    color:#6e7b78;
+    line-height:1.8;
+}
+
+/* =========================
+   STORY
+========================= */
+
+.story{
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    gap:70px;
+
+    max-width:1200px;
+    margin:auto;
+    align-items:center;
+}
+
+.story-image{
+    position:relative;
+}
+
+.story-image img{
+    width:100%;
+    height:530px;
+    object-fit:cover;
+    border-radius:5px;
+}
+
+.image-label{
+    position:absolute;
+    bottom:25px;
+    left:25px;
+
+    background:#fff;
+    padding:12px 20px;
+
+    font-size:12px;
+    font-weight:600;
+    letter-spacing:1px;
+}
+
+.story-text .number{
+    font-size:75px;
+    color:#e9bd63;
+    font-family:"DM Serif Display",serif;
+}
+
+.story-text h2{
+    font-family:"DM Serif Display",serif;
+    font-size:48px;
+    font-weight:400;
+    margin-bottom:20px;
+}
+
+.story-text p{
+    color:#667673;
+    line-height:1.9;
+    margin-bottom:17px;
+}
+
+/* =========================
+   EXPERIENCE
+========================= */
+
+.experience{
+    background:#e7eee9;
+}
+
+.experience-grid{
+    max-width:1200px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.exp-card{
+    position:relative;
+    height:400px;
+    overflow:hidden;
+    border-radius:5px;
+}
+
+.exp-card img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.6s;
+}
+
+.exp-card:hover img{
+    transform:scale(1.08);
+}
+
+.exp-overlay{
+    position:absolute;
+    bottom:0;
+    left:0;
+    right:0;
+
+    padding:70px 25px 25px;
+
+    background:linear-gradient(
+        transparent,
+        rgba(0,0,0,.85)
+    );
+
+    color:white;
+}
+
+.exp-overlay h3{
+    font-family:"DM Serif Display",serif;
+    font-size:30px;
+    font-weight:400;
+}
+
+.exp-overlay p{
+    font-size:13px;
+    color:#ddd;
+    line-height:1.6;
+    margin-top:7px;
+}
+
+/* =========================
+   JOURNEY
+========================= */
+
+.journey-wrap{
+    max-width:1000px;
+    margin:auto;
+}
+
+.journey{
+    display:grid;
+    grid-template-columns:90px 1fr;
+    margin-bottom:35px;
+}
+
+.journey-number{
+    width:60px;
+    height:60px;
+
+    background:#173b38;
+    color:#e9bd63;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+
+    font-family:"DM Serif Display",serif;
+    font-size:22px;
+}
+
+.journey-content{
+    border-bottom:1px solid #ddd;
+    padding-bottom:30px;
+}
+
+.journey-content h3{
+    font-size:20px;
+    margin-bottom:8px;
+}
+
+.journey-content p{
+    color:#707c79;
+    line-height:1.8;
+}
+
+/* =========================
+   PHOTO STRIP
+========================= */
+
+.photo-section{
+    background:#123c3a;
+    color:white;
+}
+
+.photo-section .section-head h2{
+    color:white;
+}
+
+.photo-section .section-head p{
+    color:#c9d7d5;
+}
+
+.photo-grid{
+    max-width:1200px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:1.5fr 1fr 1fr;
+    grid-template-rows:250px 250px;
+    gap:12px;
+}
+
+.photo-grid img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    border-radius:4px;
+    transition:.4s;
+}
+
+.photo-grid img:hover{
+    filter:brightness(.7);
+}
+
+.photo-big{
+    grid-row:span 2;
+}
+
+/* =========================
+   PACKAGE
+========================= */
+
+.package-area{
+    max-width:1150px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.package{
+    background:white;
+    border:1px solid #e4e1d8;
+    padding:35px;
+    border-radius:6px;
+    transition:.3s;
+}
+
+.package:hover{
+    transform:translateY(-8px);
+    box-shadow:0 18px 40px rgba(0,0,0,.1);
+}
+
+.package.featured{
+    background:#173b38;
+    color:white;
+    transform:translateY(-15px);
+}
+
+.package h3{
+    font-family:"DM Serif Display",serif;
+    font-size:30px;
+    font-weight:400;
+}
+
+.package .days{
+    color:#b88932;
+    font-size:13px;
+    margin:10px 0 20px;
+}
+
+.package ul{
+    list-style:none;
+}
+
+.package li{
+    padding:9px 0;
+    font-size:14px;
+    border-bottom:1px solid rgba(120,120,120,.15);
+}
+
+.package li::before{
+    content:"✓ ";
+    color:#b88932;
+    font-weight:bold;
+}
+
+/* =========================
+   TIPS
+========================= */
+
+.tips{
+    background:#f0ede4;
+}
+
+.tips-grid{
+    max-width:1100px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+}
+
+.tip{
+    background:white;
+    padding:25px;
+    border-left:4px solid #e9bd63;
+}
+
+.tip h3{
+    margin-bottom:8px;
+}
+
+.tip p{
+    color:#6e7977;
+    line-height:1.7;
+    font-size:14px;
+}
+
+/* =========================
+   CTA
+========================= */
+
+.cta{
+    min-height:430px;
+
+    background:
+    linear-gradient(
+        rgba(3,30,29,.78),
+        rgba(3,30,29,.78)
+    ),
+    url("https://media4.thrillophilia.com/images/photos/000/192/958/original/1582185738_Papikondalu.jpg");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+    color:white;
+}
+
+.cta-content{
+    max-width:750px;
+}
+
+.cta h2{
+    font-family:"DM Serif Display",serif;
+    font-size:65px;
+    font-weight:400;
+}
+
+.cta p{
+    margin:20px 0 30px;
+    color:#d9e3e0;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    background:#082624;
+    color:white;
+    padding:55px 7% 25px;
+}
+
+.footer-main{
+    max-width:1100px;
+    margin:auto;
+
+    display:flex;
+    justify-content:space-between;
+    gap:30px;
+}
+
+.footer-logo{
+    font-family:"DM Serif Display",serif;
+    font-size:30px;
+}
+
+.footer-logo span{
+    color:#e9bd63;
+}
+
+.footer-links a{
+    color:#bbc9c6;
+    text-decoration:none;
+    display:block;
+    margin:7px 0;
+    font-size:13px;
+}
+
+.copyright{
+    text-align:center;
+    margin-top:40px;
+    padding-top:20px;
+    border-top:1px solid #244541;
+    color:#8da19d;
+    font-size:12px;
+}
+
+/* =========================
+   SCROLL TOP
+========================= */
+
+#topBtn{
+    position:fixed;
+    right:25px;
+    bottom:25px;
+
+    width:45px;
+    height:45px;
+
+    border:none;
+    border-radius:50%;
+
+    background:#e9bd63;
+    color:#173b38;
+
+    font-size:18px;
+    cursor:pointer;
+
+    display:none;
+    z-index:999;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:900px){
+
+    .nav-links{
+        display:none;
+        position:absolute;
+        top:70px;
+        left:0;
+        width:100%;
+
+        background:#082624;
+
+        flex-direction:column;
+        padding:25px;
+    }
+
+    .nav-links.show{
+        display:flex;
+    }
+
+    .menu{
+        display:block;
+    }
+
+    .quick-info{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .quick-card{
+        border-bottom:1px solid #eee;
+    }
+
+    .story{
+        grid-template-columns:1fr;
+    }
+
+    .experience-grid{
+        grid-template-columns:1fr;
+    }
+
+    .package-area{
+        grid-template-columns:1fr;
+    }
+
+    .package.featured{
+        transform:none;
+    }
+
+    .photo-grid{
+        grid-template-columns:1fr 1fr;
+        grid-template-rows:220px 220px 220px;
+    }
+
+    .photo-big{
+        grid-row:auto;
+        grid-column:span 2;
+    }
+
+    .tips-grid{
+        grid-template-columns:1fr;
+    }
+
+    .footer-main{
+        flex-direction:column;
+    }
+
+}
+
+@media(max-width:550px){
+
+    .hero{
+        padding-left:6%;
+        padding-right:6%;
+    }
+
+    .hero h1{
+        font-size:52px;
+    }
+
+    .quick-info{
+        width:92%;
+        grid-template-columns:1fr;
+    }
+
+    .quick-card{
+        border-right:none;
+    }
+
+    section{
+        padding:75px 5%;
+    }
+
+    .section-head h2{
+        font-size:42px;
+    }
+
+    .story-text h2{
+        font-size:40px;
+    }
+
+    .photo-grid{
+        display:block;
+    }
+
+    .photo-grid img{
+        height:250px;
+        margin-bottom:10px;
+    }
+
+    .cta h2{
+        font-size:45px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+
+<!-- =========================
+     NAVBAR
+========================= -->
+
+<nav class="navbar">
+
+<div class="logo">
+Papi<span>Kondalu</span>
+</div>
+
+<div class="menu" onclick="toggleMenu()">☰</div>
+
+<ul class="nav-links" id="navLinks">
+
+<li><a href="#home">Home</a></li>
+<li><a href="#story">Story</a></li>
+<li><a href="#experience">Experience</a></li>
+<li><a href="#journey">Journey</a></li>
+<li><a href="#gallery">Gallery</a></li>
+<li><a href="#packages">Packages</a></li>
+
+</ul>
+
+</nav>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero" id="home">
+
+<div class="hero-content">
+
+<div class="small-title">
+Godavari River • Eastern Ghats
+</div>
+
+<h1>
+Into the<br>
+<span>Papi Hills</span>
+</h1>
+
+<p>
+A journey through emerald forests, winding river waters
+and the magnificent landscapes of Papikondalu.
+Experience one of Andhra Pradesh's most memorable
+river journeys.
+</p>
+
+<div class="hero-buttons">
+
+<a href="#experience" class="btn btn-gold">
+Explore Journey
+</a>
+
+<a href="#gallery" class="btn btn-light">
+View Photos
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     QUICK INFO
+========================= -->
+
+<div class="quick-info">
+
+<div class="quick-card">
+
+<div class="icon">🌊</div>
+
+<h3>Godavari River</h3>
+
+<p>Scenic river journey</p>
+
+</div>
+
+
+<div class="quick-card">
+
+<div class="icon">🏔️</div>
+
+<h3>Papi Hills</h3>
+
+<p>Eastern Ghats landscape</p>
+
+</div>
+
+
+<div class="quick-card">
+
+<div class="icon">🚤</div>
+
+<h3>River Cruise</h3>
+
+<p>Main travel experience</p>
+
+</div>
+
+
+<div class="quick-card">
+
+<div class="icon">🌿</div>
+
+<h3>Nature</h3>
+
+<p>Forests & waterfalls</p>
+
+</div>
+
+</div>
+
+
+<!-- =========================
+     STORY
+========================= -->
+
+<section id="story">
+
+<div class="section-head">
+
+<div class="eyebrow">The Destination</div>
+
+<h2>Where the river meets the hills</h2>
+
+<p>
+Papikondalu is best experienced from the Godavari itself.
+</p>
+
+</div>
+
+
+<div class="story">
+
+<div class="story-image">
+
+<img
+src="https://www.go2india.in/ap/images/godavari-perantalapalli.jpg"
+alt="Godavari Papikondalu">
+
+<div class="image-label">
+GODAVARI RIVER
+</div>
+
+</div>
+
+
+<div class="story-text">
+
+<div class="number">01</div>
+
+<h2>A landscape made for slow travel.</h2>
+
+<p>
+Papikondalu, or Papi Hills, forms part of the Eastern Ghats.
+The Godavari winds through the hills, creating a dramatic
+combination of river, forest and mountains.
+</p>
+
+<p>
+The official Andhra Pradesh Tourism brochure highlights
+the cruise through Papi Hills as a scenic experience,
+with the river narrowing and passing through the hill range.
+</p>
+
+<a
+href="https://tourism.ap.gov.in/"
+target="_blank"
+class="btn btn-gold">
+
+AP Tourism
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     EXPERIENCES
+========================= -->
+
+<section class="experience" id="experience">
+
+<div class="section-head">
+
+<div class="eyebrow">What You Will See</div>
+
+<h2>Three moments of Papikondalu</h2>
+
+<p>
+The beauty is not just one destination.
+The journey itself is the experience.
+</p>
+
+</div>
+
+
+<div class="experience-grid">
+
+
+<div class="exp-card">
+
+<img
+src="https://media4.thrillophilia.com/images/photos/000/192/958/original/1582185738_Papikondalu.jpg"
+alt="Papikondalu Boat">
+
+<div class="exp-overlay">
+
+<h3>The Cruise</h3>
+
+<p>
+Travel along the Godavari surrounded by hills and greenery.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="exp-card">
+
+<img
+src="https://punnamitourism.com/images/Papidikondalu.jpg"
+alt="Papikondalu Hills">
+
+<div class="exp-overlay">
+
+<h3>The Hills</h3>
+
+<p>
+Green hill slopes create the signature Papikondalu landscape.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="exp-card">
+
+<img
+src="https://images.beyondyatra.com/dest/papikondalu-hills/places/local-markets-andhra-pradesh-india_img_1.jpg"
+alt="Papikondalu scenery">
+
+<div class="exp-overlay">
+
+<h3>The Silence</h3>
+
+<p>
+River, forests and distant hills create a peaceful escape.
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     JOURNEY
+========================= -->
+
+<section id="journey">
+
+<div class="section-head">
+
+<div class="eyebrow">Travel Flow</div>
+
+<h2>A day on the river</h2>
+
+<p>
+A sample journey structure. Actual routes and timings
+depend on the boat operator and current conditions.
+</p>
+
+</div>
+
+
+<div class="journey-wrap">
+
+
+<div class="journey">
+
+<div class="journey-number">01</div>
+
+<div class="journey-content">
+
+<h3>Reach the boarding point</h3>
+
+<p>
+Start from the designated boarding location specified
+by your tour operator.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="journey">
+
+<div class="journey-number">02</div>
+
+<div class="journey-content">
+
+<h3>Start the Godavari cruise</h3>
+
+<p>
+Set out onto the river and watch the landscape slowly
+change from riverside countryside to hill scenery.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="journey">
+
+<div class="journey-number">03</div>
+
+<div class="journey-content">
+
+<h3>Enter the Papi Hills</h3>
+
+<p>
+The surrounding green slopes become the main attraction
+as the river passes through the hill range.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="journey">
+
+<div class="journey-number">04</div>
+
+<div class="journey-content">
+
+<h3>Explore & photograph</h3>
+
+<p>
+Enjoy the scenery, follow local instructions and capture
+the river and hills from the boat.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="journey">
+
+<div class="journey-number">05</div>
+
+<div class="journey-content">
+
+<h3>Return journey</h3>
+
+<p>
+Complete the cruise and return to the designated
+destination according to your package.
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     GALLERY
+========================= -->
+
+<section class="photo-section" id="gallery">
+
+<div class="section-head">
+
+<div class="eyebrow">Visual Journey</div>
+
+<h2>See Papikondalu</h2>
+
+<p>
+A glimpse of the river, boats and green hills.
+</p>
+
+</div>
+
+
+<div class="photo-grid">
+
+<img
+class="photo-big"
+src="https://www.go2india.in/ap/images/godavari-perantalapalli.jpg"
+alt="Godavari River">
+
+<img
+src="https://punnamitourism.com/images/Papidikondalu.jpg"
+alt="Papikondalu">
+
+<img
+src="https://media4.thrillophilia.com/images/photos/000/192/958/original/1582185738_Papikondalu.jpg"
+alt="Boat">
+
+<img
+src="https://images.beyondyatra.com/dest/papikondalu-hills/places/local-markets-andhra-pradesh-india_img_1.jpg"
+alt="Papikondalu landscape">
+
+<img
+src="https://www.go2india.in/ap/images/godavari-perantalapalli.jpg"
+alt="Godavari scenery">
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     PACKAGES
+========================= -->
+
+<section id="packages">
+
+<div class="section-head">
+
+<div class="eyebrow">Plan Your Trip</div>
+
+<h2>Choose your experience</h2>
+
+<p>
+These are website design examples — not live package prices.
+Check the latest official/operator information before booking.
+</p>
+
+</div>
+
+
+<div class="package-area">
+
+
+<div class="package">
+
+<h3>Day Explorer</h3>
+
+<div class="days">ONE DAY</div>
+
+<ul>
+
+<li>River cruise</li>
+<li>Papi Hills views</li>
+<li>Photography stops</li>
+<li>Riverside scenery</li>
+
+</ul>
+
+<br>
+
+<a href="#tips" class="btn btn-gold">
+Plan Trip
+</a>
+
+</div>
+
+
+<div class="package featured">
+
+<h3>River Escape</h3>
+
+<div class="days">SCENIC JOURNEY</div>
+
+<ul>
+
+<li>Godavari cruise</li>
+<li>Hill landscapes</li>
+<li>Nature experience</li>
+<li>Cultural stops if included</li>
+
+</ul>
+
+<br>
+
+<a href="#tips" class="btn btn-gold">
+Explore
+</a>
+
+</div>
+
+
+<div class="package">
+
+<h3>Photo Journey</h3>
+
+<div class="days">NATURE & PHOTOS</div>
+
+<ul>
+
+<li>River views</li>
+<li>Hill photography</li>
+<li>Landscape moments</li>
+<li>Relaxed exploration</li>
+
+</ul>
+
+<br>
+
+<a href="#gallery" class="btn btn-gold">
+Gallery
+</a>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     TRAVEL TIPS
+========================= -->
+
+<section class="tips" id="tips">
+
+<div class="section-head">
+
+<div class="eyebrow">Before You Go</div>
+
+<h2>Travel smart</h2>
+
+<p>
+Simple things that make your journey more comfortable.
+</p>
+
+</div>
+
+
+<div class="tips-grid">
+
+
+<div class="tip">
+
+<h3>🌤️ Check the weather</h3>
+
+<p>
+River conditions and boat operations can vary.
+Check current conditions before travelling.
+</p>
+
+</div>
+
+
+<div class="tip">
+
+<h3>🎒 Carry essentials</h3>
+
+<p>
+Keep water, sun protection, comfortable clothing,
+a power bank and your camera/phone.
+</p>
+
+</div>
+
+
+<div class="tip">
+
+<h3>🚤 Follow boat instructions</h3>
+
+<p>
+Follow the operator's safety instructions and use
+the safety equipment provided as directed.
+</p>
+
+</div>
+
+
+<div class="tip">
+
+<h3>📅 Confirm your route</h3>
+
+<p>
+Boarding points, schedules and stops may vary.
+Confirm details with the operator before departure.
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     CTA
+========================= -->
+
+<section class="cta">
+
+<div class="cta-content">
+
+<h2>
+Let the river take you to the hills.
+</h2>
+
+<p>
+Papikondalu • Godavari • Eastern Ghats
+</p>
+
+<a
+href="https://tourism.ap.gov.in/"
+target="_blank"
+class="btn btn-gold">
+
+Official AP Tourism
+
+</a>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+<div class="footer-main">
+
+<div>
+
+<div class="footer-logo">
+Papi<span>Kondalu</span>
+</div>
+
+<p style="color:#9eb0ad;margin-top:10px;">
+A visual tourism website project.
+</p>
+
+</div>
+
+
+<div class="footer-links">
+
+<strong>Explore</strong>
+
+<a href="#story">Destination</a>
+<a href="#experience">Experience</a>
+<a href="#gallery">Gallery</a>
+<a href="#packages">Packages</a>
+
+</div>
+
+
+<div class="footer-links">
+
+<strong>Official</strong>
+
+<a
+href="https://tourism.ap.gov.in/"
+target="_blank">
+
+Andhra Pradesh Tourism
+
+</a>
+
+</div>
+
+</div>
+
+
+<div class="copyright">
+
+© 2026 Papikondalu Tourism | Educational Web Project
+
+</div>
+
+</footer>
+
+
+<!-- TOP BUTTON -->
+
+<button id="topBtn" onclick="topFunction()">
+↑
+</button>
+
+
+<script>
+
+/* MOBILE MENU */
+
+function toggleMenu(){
+
+    document
+    .getElementById("navLinks")
+    .classList
+    .toggle("show");
+
+}
+
+
+/* CLOSE MENU AFTER CLICK */
+
+document.querySelectorAll(".nav-links a").forEach(link => {
+
+    link.addEventListener("click",function(){
+
+        document
+        .getElementById("navLinks")
+        .classList
+        .remove("show");
+
+    });
+
+});
+
+
+/* TOP BUTTON */
+
+window.onscroll=function(){
+
+    let btn=document.getElementById("topBtn");
+
+    if(document.documentElement.scrollTop > 500){
+
+        btn.style.display="block";
+
+    }else{
+
+        btn.style.display="none";
+
+    }
+
+};
+
+
+function topFunction(){
+
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
+
+}
+
+</script>
+
+</body>
+</html>
